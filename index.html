@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="author" content="John Bede">
+  <script src="https://kit.fontawesome.com/10e8632cd5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="UTF-8">
   <title>John Cervantes | Jazz Pianist</title>
@@ -8,5 +10,32 @@
 </head>
 
 <body>
-    
+  <nav class="topnav" id="myTopnav">
+    <a href="" class="active">Home</a>
+    <a href="">Shows</a>
+    <a href="">Discography</a>
+    <a href="">About</a>
+    <a href="">Gallery</a>
+    <a href="">Press</a>
+    <a href="">Contacts</a>
+    <a href="javascript:void(0);" class="icon" onclick="menuClick()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+
+  <script>
+  function menuClick() {
+    var selectNav = document.getElementById("myTopnav");
+    if (selectNav.className === "topnav") {
+      selectNav.className += " responsive";
+    } else {
+      selectNav.className = "topnav";
+    }
+  }
+  </script>
+<!--END OF NAVIGATION BAR-->
+
+<main>
+
+</main>
 </body>
