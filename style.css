@@ -1,3 +1,5 @@
+/* ===== FOR EVERY PAGE ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,19 +16,16 @@
     --topnav-height: 6rem;
 }
 
-/* @media only screen and (max-width: 426px) {
-    :root {
-      --side-margins: 2%;
-    }
-} */
+html {
+    box-sizing: border-box;
+    width: 100%;
+}
 
 body {
     color: white;
     background-color: black;
     font-family: 'Poppins', sans-serif;
 }
-
-/* ===== NAVIGATION BAR ===== */
 
 .topnav {
     position: fixed;
@@ -36,21 +35,23 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    height: var(--topnav-height);
+    justify-content: space-between;
     align-items: center;
-    margin-left: var(--side-margins);
-    margin-right: var(--side-margins);
-    background-color: black;
+    background-color: hotpink;
+    list-style-type:none;
+}
+
+.topnav li {
+    display: block;
+    background-color: lawngreen;
 }
 
 .topnav a {
-    display: block;
     color: gray;
-    padding: 1.5rem 2rem 1.5rem 0;
     font-size: 2rem;
     text-decoration: none;
     font-family: 'Bebas Neue', cursive;
+    background-color: khaki;
 }
 
 .topnav a:hover {
@@ -67,14 +68,12 @@ body {
 
 /* Small screen menu closed */
 @media screen and (max-width: 800px) {
-   .topnav {
-    justify-content: space-between;
-   }
-    .topnav a:not(:first-child) {
+    .topnav li:not(:first-child) {
         display: none;
     }
-    .topnav a.icon {
+    .topnav li.icon {
         display: block;
+        margin-right: var(--side-margins);
     }
 }
 
@@ -85,16 +84,21 @@ body {
         justify-content: flex-start;
         height: auto;
     }
-    .topnav.responsive a {
+    .topnav.responsive li {
         display: block;
-        padding: 0.5rem 0;
+    }
+    .topnav.responsive > .icon {
+        position: fixed;
+        top: 0;
+        right: var(--side-margins);
+        margin-right: 0;
     }
 }
-
-/* ===== MAIN ===== */
 
 main {
     margin-left: var(--side-margins);
     margin-right: var(--side-margins);
     margin-top: var(--topnav-height);
   }
+
+ /* ===== HOME PAGE ===== */
