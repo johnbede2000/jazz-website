@@ -11,33 +11,46 @@
 
 :root {
     --side-margins: 5%;
+    --topnav-height: 6rem;
 }
 
+/* @media only screen and (max-width: 426px) {
+    :root {
+      --side-margins: 2%;
+    }
+} */
+
 body {
-    background-color: black;
     color: white;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* ===== NAVIGATION BAR ===== */
 
-/* Wide screen - menu always open */
 .topnav {
-    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
+    justify-content: flex-start;
+    height: var(--topnav-height);
+    align-items: center;
+    margin-left: var(--side-margins);
+    margin-right: var(--side-margins);
+    background-color: black;
 }
 
 .topnav a {
     display: block;
-    color: silver;
-    text-align: center;
-    padding: 0.75rem 1rem;
+    color: gray;
+    padding: 1.5rem 2rem 1.5rem 0;
+    font-size: 2rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .topnav a:hover {
@@ -52,8 +65,11 @@ body {
     display: none;
 }
 
-/* SMALL SCREEN MENU HIDDEN */
-@media screen and (max-width: 600px) {
+/* Small screen menu closed */
+@media screen and (max-width: 800px) {
+   .topnav {
+    justify-content: space-between;
+   }
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -62,14 +78,23 @@ body {
     }
 }
 
-/* SMALL SCREEN MENU OPENED */
-@media screen and (max-width: 600px) {
+/* Small screen menu open */
+@media screen and (max-width: 800px) {
     .topnav.responsive {
-        position: relative;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
     }
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+    .topnav.responsive a {
+        display: block;
+        padding: 0.5rem 0;
     }
 }
+
+/* ===== MAIN ===== */
+
+main {
+    margin-left: var(--side-margins);
+    margin-right: var(--side-margins);
+    margin-top: var(--topnav-height);
+  }
