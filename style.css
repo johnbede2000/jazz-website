@@ -11,14 +11,11 @@
     box-sizing: inherit;
 }
 
-:root {
-    --side-margins: 5%;
-    --topnav-height: 6rem;
-}
-
 html {
     box-sizing: border-box;
     width: 100%;
+    --side-margins: 5%;
+    --topnav-height: 6rem;
 }
 
 body {
@@ -38,7 +35,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: hotpink;
-    list-style-type:none;
+    list-style-type: none;
 }
 
 .topnav li {
@@ -51,14 +48,14 @@ body {
     font-size: 2rem;
     text-decoration: none;
     font-family: 'Bebas Neue', cursive;
-    background-color: khaki;
+    background-color: yellow;
 }
 
 .topnav a:hover {
     color: white;
 }
 
-.topnav a.active {
+.topnav a.current-page {
     color: orange;
 }
 
@@ -73,7 +70,7 @@ body {
     }
     .topnav li.icon {
         display: block;
-        margin-right: var(--side-margins);
+        /* margin-right: var(--side-margins); */
     }
 }
 
@@ -83,15 +80,16 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         height: auto;
+        min-height: 90vh;
     }
     .topnav.responsive li {
         display: block;
     }
-    .topnav.responsive > .icon {
+    .topnav.responsive .icon {
         position: fixed;
         top: 0;
-        right: var(--side-margins);
-        margin-right: 0;
+        right: 0; /* var(--side-margins); */
+        /* margin-right: 0; */
     }
 }
 

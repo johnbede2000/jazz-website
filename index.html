@@ -13,20 +13,20 @@
 <body>
   <nav>
   <ul class="topnav" id="myTopnav">
-    <li><a href="" class="active">Home</a></li>
+    <li><a href="" class="current-page">Home</a></li><!--change the order when re-using on other pages. First child remains seen when menu closed on small screen-->
     <li><a href="">Shows</a></li>
     <li><a href="">Discography</a></li>
     <li><a href="">About</a></li>
     <li><a href="">Gallery</a></li>
     <li><a href="">Press</a></li>
     <li><a href="">Contact</a></li>
-    <li class="icon"><a href="javascript:void(0);" onclick="menuClick()"><i class="fa fa-bars"></i></a></li>
-    <li></ul></nav>
+    <li class="icon"><a href="javascript:void(0);" onclick="menuClick()"><i class="fas fa-bars"></i></a></li>
+    </ul></nav>
   </div>
 
   <script>
   function menuClick() {
-    var selectNav = document.getElementById("myTopnav");
+    let selectNav = document.getElementById("myTopnav");
     if (selectNav.className === "topnav") {
       selectNav.className += " responsive";
     } else {
