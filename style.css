@@ -16,6 +16,11 @@ html {
     width: 100%;
     --side-margins: 5%;
     --topnav-height: 4rem;
+    --background-gray: rgb(249,249,249);
+    --text-light: rgb(156,152,148);
+    --text-blue: rgb(60,137,201);
+    --background-gray: var(148,148,148);
+    --almost-black: rgb(54,54,54);
 }
 
 body {  
@@ -32,7 +37,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(0,0,0);
+    background-color: white;
     list-style-type: none;
     padding-left: var(--side-margins);
     padding-right: var(--side-margins);
@@ -45,18 +50,29 @@ body {
 }
 
 .topnav a {
-    color: gray;
+    color: var(--almost-black);
     font-size: 2rem;
     text-decoration: none;
     font-family: 'Bebas Neue', cursive;
+    /*underline effect from center */
+    background-image: linear-gradient(var(--text-blue),var(--text-blue));
+    background-size: 0 5px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
 }
 
 .topnav a:hover {
-    color: white;
+    color: var(--text-blue);
+    background-size: 100% 5px, auto;
+}
+
+.topnav a::after:hover {
+    transform: scaleX(1);
 }
 
 .topnav a.current-page {
-    color: orange;
+    color: var(--text-blue);
 }
 
 .topnav .icon {
@@ -98,7 +114,7 @@ main {
     margin-top: var(--topnav-height);
 }
 
-/* ===== HOME PAGE ===== */
+/* ===== HOME PAGE ===== 
 
 body {
     background-image: url('https://res.cloudinary.com/dd23iaiap/image/upload/v1587207768/John_Trio_live_lo_res_n1r5r2.jpg');
@@ -107,3 +123,5 @@ body {
     background-size: cover;
     background-position: right;
 }
+
+*/
