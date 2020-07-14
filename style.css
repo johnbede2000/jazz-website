@@ -15,11 +15,10 @@ html {
     box-sizing: border-box;
     width: 100%;
     --side-margins: 5%;
-    --topnav-height: 4rem;
+    --topnav-height: 6rem;
     --background-gray: rgb(249,249,249);
-    --text-light: rgb(156,152,148);
     --text-blue: rgb(60,137,201);
-    --background-gray: var(148,148,148);
+    --text-light: rgb(148,148,148);
     --almost-black: rgb(54,54,54);
 }
 
@@ -37,7 +36,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color:white;
+    height: var(--topnav-height); /* wide screens only */
     list-style-type: none;
     padding-left: var(--side-margins);
     padding-right: var(--side-margins);
@@ -55,7 +55,7 @@ body {
     text-decoration: none;
     font-family: 'Bebas Neue', cursive;
     background-image: linear-gradient(var(--text-blue),var(--text-blue));
-    background-size: 0 5px, auto;
+    background-size: 0 5px;
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: all .2s ease-out;
@@ -63,7 +63,7 @@ body {
 
 .topnav a:hover {
     color: var(--text-blue);
-    background-size: 100% 5px, auto;
+    background-size: 100% 5px;
 }
 
 .topnav li.icon a:hover {
@@ -80,11 +80,15 @@ body {
 
 /* Small screen menu closed */
 @media screen and (max-width: 43em) {
+    .topnav {
+        height: auto;
+    }
     .topnav li:not(:first-child) {
         display: none;
     }
     .topnav li.icon {
         display: block;
+        color: var(--almost-black);
     }
 }
 
@@ -103,6 +107,7 @@ body {
         position: fixed;
         top: 0;
         right: var(--side-margins);
+        color: var(--text-blue);
     }
 }
 
@@ -112,14 +117,14 @@ main {
     margin-top: var(--topnav-height);
 }
 
-/* ===== HOME PAGE ===== 
-
-body {
-    background-image: url('https://res.cloudinary.com/dd23iaiap/image/upload/v1587207768/John_Trio_live_lo_res_n1r5r2.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: right;
+@media screen and (max-width: 43em) {
+    main {
+        margin-top: 4rem;
+    }
 }
 
-*/
+/* ===== HOME PAGE ===== */
+
+.mobile-img {
+    display: none;
+}
