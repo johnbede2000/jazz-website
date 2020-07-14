@@ -37,7 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color:white;
-    height: var(--topnav-height); /* wide screens only */
+    height: var(--topnav-height);
     list-style-type: none;
     padding-left: var(--side-margins);
     padding-right: var(--side-margins);
@@ -79,7 +79,7 @@ body {
 }
 
 /* Small screen menu closed */
-@media screen and (max-width: 43em) {
+@media screen and (max-width: 45em) {
     .topnav {
         height: auto;
     }
@@ -93,7 +93,7 @@ body {
 }
 
 /* Small screen menu open */
-@media screen and (max-width: 43em) {
+@media screen and (max-width: 45em) {
     .topnav.responsive {
         flex-direction: column;
         justify-content: flex-start;
@@ -124,6 +124,14 @@ main {
 }
 
 /* ===== HOME PAGE ===== */
+
+.desktop-img {
+    background-image: url("https://res.cloudinary.com/dd23iaiap/image/upload/v1594723219/john%20cervantes/2-L1000594_vxkpjx.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right 30%;
+}
 
 .mobile-img {
     display: none;
