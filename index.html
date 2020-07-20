@@ -21,9 +21,21 @@
     <li><a href="">Videos</a></li>
     <li><a href="">Live</a></li>
     <li><a class="last-link" href="">Releases</a></li>
-    <li class="icon"><a href="javascript:void(0);" onclick="menuClick()"><i class="fas fa-bars"></i></a></li>
-    </ul></nav>
-  </div>
+    <li class="icon"><a href="javascript:void(0);" onclick="menuClick(); myFunction(this);">
+      <div class="icon-container">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    
+      <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+      </script></a>
+    </li>
+  </ul>
+  </nav>
 
   <script>
   function menuClick() {
@@ -39,7 +51,6 @@
 
 
 <div class="desktop-img"></div>
-<img class="mobile-img" src="https://res.cloudinary.com/dd23iaiap/image/upload/v1594723219/john%20cervantes/8-L1000723_cpco1y.jpg" alt="John Cervantes">
 
 <footer>
 <div>
