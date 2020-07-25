@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="author" content="www.johnbe.de">
+  <script src="https://kit.fontawesome.com/10e8632cd5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <title>About | John Cervantes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
+  <meta name="Description" content="">
+  <meta name="Keywords" content="john cervantes, jazz, music, about, biography, biog">
+
+</head>
+
+<body>
+  <nav>
+  <ul class="topnav" id="myTopnav">
+    <li><a href="" class="current-page">Home</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Videos</a></li>
+    <li><a href="">Live</a></li>
+    <li><a class="last-link" href="">Releases</a></li>
+    <li class="icon"><a href="javascript:void(0);" onclick="menuClick(); myFunction(this);">
+      <div class="icon-container">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    
+      <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+      </script></a>
+    </li>
+  </ul>
+  </nav>
+
+  <script>
+  function menuClick() {
+    let selectNav = document.getElementById("myTopnav");
+    if (selectNav.className === "topnav") {
+      selectNav.className += " responsive";
+    } else {
+      selectNav.className = "topnav";
+    }
+  }
+  </script>
+<!--END OF NAVIGATION BAR-->
