@@ -1,4 +1,4 @@
-/* ===== FOR EVERY PAGE ===== */
+/* ===== TOPNAV FOR EVERY PAGE ===== */
 
 * {
     margin: 0;
@@ -92,7 +92,7 @@ body {
 }
 
 /* Small screen menu open */
-@media screen and (max-width: 35em) { /*update if change number of pages or names*/
+@media screen and (max-width: 35em) { /*update if change number or names of pages */
     .topnav.responsive {
         flex-direction: column;
         justify-content: flex-start;
@@ -159,7 +159,7 @@ main {
     background-position: right 30%;
 }
 
-/* ====== FOOTER ===== */
+/* ====== FOOTER FOR EVERY PAGE ===== */
 
 footer {
     background-color: black;
@@ -170,7 +170,7 @@ footer {
     width: 100%;
 }
 
-.footer-grid {
+.footer-flex {
     display: flex;
     justify-content: center;
     padding-left: 0.75rem;
@@ -178,12 +178,12 @@ footer {
     flex-wrap: wrap;
 }
 
-.footer-grid a {
+.footer-flex a {
     color: var(--text-light);
     font-size: 2.5rem;
     padding: 0.75rem;
 }
 
-.footer-grid a:hover {
+.footer-flex a:hover {
     color: white;
 }
