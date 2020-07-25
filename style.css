@@ -164,4 +164,7 @@ main {
 
 footer {
     background-color: black;
+    padding: 1rem;
+    color: white;
+    text-align: center;
 }
