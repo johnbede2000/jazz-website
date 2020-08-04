@@ -104,8 +104,8 @@ body {
         display: block;
     }
     .topnav.responsive .icon {
-        position: fixed;
-        /* top: 0; */
+        position: absolute;
+        top: 0;
         right: var(--side-margins);
         color: var(--text-blue);
     }
