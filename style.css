@@ -37,7 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color:black;
-    height: var(--topnav-height);
+    height: var(--topnav-height-desk);
     list-style-type: none;
     padding-left: var(--side-margins);
     padding-right: var(--side-margins);
