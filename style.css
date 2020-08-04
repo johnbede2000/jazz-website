@@ -1,4 +1,4 @@
-/* ===== TOPNAV FOR EVERY PAGE ===== */
+/* ===== TOPNAV ===== */
 
 * {
     margin: 0;
@@ -15,7 +15,8 @@ html {
     box-sizing: border-box;
     width: 100%;
     --side-margins: 5%;
-    --topnav-height: 6rem;
+    --topnav-height-desk: 6rem;
+    --topnav-height-mob: 4rem;
     --background-gray: rgb(249,249,249);
     --text-light: rgb(148,148,148);
     --almost-black: rgb(54,54,54);
@@ -36,7 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color:black;
-    height: var(--topnav-height);
+    height: var(--topnav-height-desk);
     list-style-type: none;
     padding-left: var(--side-margins);
     padding-right: var(--side-margins);
@@ -80,7 +81,7 @@ body {
 /* Small screen menu closed */
 @media screen and (max-width: 35em) {
     .topnav {
-        height: auto;
+        height: var(--topnav-height-mob);
     }
     .topnav li:not(:first-child) {
         display: none;
@@ -96,8 +97,8 @@ body {
     .topnav.responsive {
         flex-direction: column;
         justify-content: flex-start;
-        height: auto;
         padding-bottom: 1rem;
+        height: var(--topnav-height-mob);
     }
     .topnav.responsive li {
         display: block;
@@ -110,17 +111,17 @@ body {
     }
 }
 
-main {
+/* main {
     margin-left: var(--side-margins);
     margin-right: var(--side-margins);
     margin-top: var(--topnav-height);
-}
+} */
 
-@media screen and (max-width: 35em) {
+/* @media screen and (max-width: 35em) {
     main {
         margin-top: 4rem;
     }
-}
+} */
 
 .icon-container {
     display: inline-block;
@@ -151,9 +152,23 @@ main {
 
 /* ===== HOME PAGE ===== */
 
+.vh-trick {
+    position: absolute;
+    top: var(--topnav-height-desk);
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 35em) {
+    .vh-trick {
+        top: var(--topnav-height-mob);
+    }
+}
+
 .desktop-img {
     background-image: url("https://res.cloudinary.com/dd23iaiap/image/upload/v1594723219/john%20cervantes/2-L1000594_vxkpjx.jpg");
-    height: 100vh;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right 30%;
