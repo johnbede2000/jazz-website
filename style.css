@@ -98,30 +98,18 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         padding-bottom: 1rem;
-        height: var(--topnav-height-mob);
+        height: auto;
     }
     .topnav.responsive li {
         display: block;
     }
     .topnav.responsive .icon {
         position: fixed;
-        top: 0;
+        /* top: 0; */
         right: var(--side-margins);
         color: var(--text-blue);
     }
 }
-
-/* main {
-    margin-left: var(--side-margins);
-    margin-right: var(--side-margins);
-    margin-top: var(--topnav-height);
-} */
-
-/* @media screen and (max-width: 35em) {
-    main {
-        margin-top: 4rem;
-    }
-} */
 
 .icon-container {
     display: inline-block;
@@ -152,7 +140,7 @@ body {
 
 /* ===== HOME PAGE ===== */
 
-.vh-trick {
+.fill-height {
     position: absolute;
     top: var(--topnav-height-desk);
     bottom: 0;
@@ -161,7 +149,7 @@ body {
 }
 
 @media screen and (max-width: 35em) {
-    .vh-trick {
+    .fill-height {
         top: var(--topnav-height-mob);
     }
 }
