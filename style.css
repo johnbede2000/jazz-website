@@ -154,7 +154,7 @@ body {
 
 .vh-trick {
     position: absolute;
-    top: var(--topnav-height);
+    top: var(--topnav-height-desk);
     bottom: 0;
     left: 0;
     right: 0;
