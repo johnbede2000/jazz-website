@@ -164,7 +164,7 @@ main {
     position: absolute; /* make sure parent is positioned */
     bottom: 0;
     left: 50%;
-    color: white;
+    color: var(--text-light);
     font-size: 3rem;
 }
 
