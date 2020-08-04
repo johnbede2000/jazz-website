@@ -181,6 +181,7 @@ body {
     left: 50%;
     color: var(--text-light);
     font-size: 3rem;
+    opacity: 1;
 }
 
 .bounce {

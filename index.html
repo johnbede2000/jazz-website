@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
   <meta name="Description" content="John Cervantes is a London-based jazz musician & composer. Explore his website for more information.">
   <meta name="Keywords" content="john cervantes, jazz, music, pianist, piano">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -55,6 +55,12 @@
   <div class="arrow">
   <p class="bounce">&#8964;</p></div>
 </div>
+
+<script>
+  $(window).scroll(function(){
+    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 100);
+  });
+</script>
 
 <footer>
 <p>Site under reconstruction. Please check back soon!</p>
