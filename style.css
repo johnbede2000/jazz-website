@@ -138,7 +138,7 @@ body {
     background-color: white;
   }
 
-/* ===== HOME PAGE ===== */
+/* ===== PAGES ===== */
 
 .fill-height {
     position: absolute;
@@ -154,7 +154,7 @@ body {
     }
 }
 
-.desktop-img {
+.home-img {
     background-image: url("https://res.cloudinary.com/dd23iaiap/image/upload/v1594723219/john%20cervantes/2-L1000594_vxkpjx.jpg");
     height: 100%;
     background-size: cover;
@@ -193,7 +193,7 @@ body {
     width: 100%;
     }
 
-/* ====== FOOTER FOR EVERY PAGE ===== */
+/* ====== FOOTER ===== */
 
 footer {
     background-color: black;
