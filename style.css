@@ -132,15 +132,15 @@ body {
     transition: 0.4s;
   }
   
-  .change .bar1 {
+  .cross .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
     background-color: white;
   }
   
-  .change .bar2 {opacity: 0;}
+  .cross .bar2 {opacity: 0;}
   
-  .change .bar3 {
+  .cross .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
     background-color: white;
@@ -215,8 +215,8 @@ footer {
 .footer-flex {
     display: flex;
     justify-content: center;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: var(--side-margins);
+    padding-right: var(--side-margins);
     flex-wrap: wrap;
 }
 
