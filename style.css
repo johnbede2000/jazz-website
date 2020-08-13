@@ -23,8 +23,8 @@ image {
 
 :root {
     --side-margins: 5%;
-    --topnav-height-desk: 6rem;
-    --topnav-height-mob: 4rem;
+    --topnav-height-desk: 6em;
+    --topnav-height-mob: 4em;
     --background-gray: rgb(249,249,249);
     --text-light: rgb(148,148,148);
     --almost-black: rgb(54,54,54);
@@ -105,15 +105,15 @@ body {
     .topnav.mobile {
         flex-direction: column;
         justify-content: flex-start;
-        padding-bottom: 1rem; /* change to lobotomized owl */
+        padding-bottom: 0.75rem; /*change to lobotomized owl */
         height: auto;
     }
     .topnav.mobile li {
         display: block;
+        padding-top: 0.75rem;
     }
-    .hamburger {
+    .mobile .hamburger {
         position: absolute;
-        top: 0;
         right: var(--side-margins);
         color: var(--text-blue);
     }
