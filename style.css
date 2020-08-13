@@ -74,7 +74,7 @@ body {
     background-size: 100% 5px;
 }
 
-.hamburger a:hover {
+.hamburger a:hover, .current-page a:hover {
     background-size: 0 5px;
 }
 
