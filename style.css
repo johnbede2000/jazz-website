@@ -1,231 +1,252 @@
 /* ===== RESET / SETUP ===== */
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-  
+
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    width: 100%;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 image {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 :root {
-    --side-margins: 5%;
-    --topnav-height-desk: 6em;
-    --topnav-height-mob: 4em;
-    --background-gray: rgb(249,249,249);
-    --text-light: rgb(148,148,148);
-    --almost-black: rgb(54,54,54);
+  --side-margins: 5%;
+  --topnav-height-desk: 6em;
+  --topnav-height-mob: 4em;
+  --background-gray: rgb(249, 249, 249);
+  --text-light: rgb(148, 148, 148);
+  --almost-black: rgb(54, 54, 54);
 }
 
-body {  
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* ===== TOPNAV ===== */
 
 .topnav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: var(--topnav-height-desk);
-    z-index: 10;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color:black;
-    list-style-type: none;
-    padding-left: var(--side-margins);
-    padding-right: var(--side-margins);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--topnav-height-desk);
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  list-style-type: none;
+  padding-left: var(--side-margins);
+  padding-right: var(--side-margins);
 }
 
 .topnav li {
-    display: block;
+  display: block;
 }
 
 .topnav a {
-    color: var(--text-light);
-    font-size: 2rem;
-    text-decoration: none;
-    font-family: 'Bebas Neue', sans-serif;
-    background-image: linear-gradient(white,white);
-    background-size: 0 5px;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    transition: all .2s ease-out;
+  color: var(--text-light);
+  font-size: 2rem;
+  text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  background-image: linear-gradient(white, white);
+  background-size: 0 5px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all 0.2s ease-out;
 }
 
 .topnav a:hover {
-    color: white;
-    background-size: 100% 5px;
+  color: white;
+  background-size: 100% 5px;
 }
 
-.hamburger a:hover, .current-page a:hover {
-    background-size: 0 5px;
+.hamburger a:hover,
+.current-page a:hover {
+  background-size: 0 5px;
 }
 
 .current-page a {
-    color: white;
+  color: white;
 }
 
 .topnav li.hamburger {
-    display: none;
-    color: var(--text-light);
+  display: none;
+  color: var(--text-light);
 }
 
 /* Small screen menu closed */
 @media screen and (max-width: 35em) {
-    .topnav {
-        height: var(--topnav-height-mob); /* or just auto if sort paddings margins properly */
-    }
-    .topnav li {
-        display: none;
-    }
-    .topnav .hamburger.remain, .topnav li.current-page.remain {
-        display: block;
-    }
+  .topnav {
+    height: var(
+      --topnav-height-mob
+    ); /* or just auto if sort paddings margins properly */
+  }
+  .topnav li {
+    display: none;
+  }
+  .topnav .hamburger.remain,
+  .topnav li.current-page.remain {
+    display: block;
+  }
 }
 
 /* Small screen menu open */
-@media screen and (max-width: 35em) { /*update if change number or names of pages */
-    .topnav.mobile {
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-bottom: 0.75rem; /*change to lobotomized owl */
-        height: auto;
-    }
-    .topnav.mobile li {
-        display: block;
-        padding-top: 0.75rem;
-    }
-    .mobile .hamburger {
-        position: absolute;
-        right: var(--side-margins);
-        color: var(--text-blue);
-    }
+@media screen and (max-width: 35em) {
+  /*update if change number or names of pages */
+  .topnav.mobile {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 0.75rem; /*change to lobotomized owl */
+    height: auto;
+  }
+  .topnav.mobile li {
+    display: block;
+    padding-top: 0.75rem;
+  }
+  .mobile .hamburger {
+    position: absolute;
+    right: var(--side-margins);
+    color: var(--text-blue);
+  }
 }
 
 .icon-container {
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color:var(--text-light);
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  
-  .cross .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-    background-color: white;
-  }
-  
-  .cross .bar2 {opacity: 0;}
-  
-  .cross .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-    background-color: white;
-  }
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--text-light);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.cross .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: white;
+}
+
+.cross .bar2 {
+  opacity: 0;
+}
+
+.cross .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: white;
+}
 
 /* ===== PAGES ===== */
 
 .fill-height {
-    position: absolute;
-    top: var(--topnav-height-desk);
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: absolute; /* no positioned ancestors, so relative to the document body, and moves along with page scrolling (background only fills one screen, moves up when you scroll down) */
+  top: var(--topnav-height-desk);
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 @media screen and (max-width: 35em) {
-    .fill-height {
-        top: var(--topnav-height-mob);
-    }
+  .fill-height {
+    top: var(--topnav-height-mob);
+  }
 }
 
 .home-img {
-    background-image: url("https://res.cloudinary.com/dd23iaiap/image/upload/v1594723219/john%20cervantes/2-L1000594_vxkpjx.jpg");
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right 30%;
-    position: relative;
+  background-image: url('https://res.cloudinary.com/dd23iaiap/image/upload/v1594723219/john%20cervantes/2-L1000594_vxkpjx.jpg');
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 30%;
+  position: relative;
 }
 
 .arrow {
-    position: absolute; /* make sure parent is positioned */
-    bottom: 0;
-    left: 50%;
-    color: var(--text-light);
-    font-size: 3rem;
-    opacity: 1;
+  position: absolute; /* make sure parent is positioned */
+  bottom: 0;
+  left: 50%;
+  color: var(--text-light);
+  font-size: 3rem;
+  opacity: 1;
 }
 
 .bounce {
-    animation-name: bounce;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-    animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-iteration-count: infinite;
 }
-  
+
 @keyframes bounce {
-    0%   { transform: translateY(0); }
-    30%  { transform: translateY(-50%); }
-    50%  { transform: translateY(0); }
-    57%  { transform: translateY(-7%); }
-    64%  { transform: translateY(0); }
-    100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  57% {
+    transform: translateY(-7%);
+  }
+  64% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .embed-youtube {
-    max-width: 560px;
-    width: 100%;
-    }
+  max-width: 560px;
+  width: 100%;
+}
 
 /* ====== FOOTER ===== */
 
 footer {
-    background-color: black;
-    padding: 1rem;
-    color: white;
-    font-size: 1.5rem;
-    text-align: center;
-    width: 100%;
+  background-color: black;
+  padding: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
 }
 
 .footer-flex {
-    display: flex;
-    justify-content: center;
-    padding-left: var(--side-margins);
-    padding-right: var(--side-margins);
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  padding-left: var(--side-margins);
+  padding-right: var(--side-margins);
+  flex-wrap: wrap;
 }
 
 .footer-flex a {
-    color: var(--text-light);
-    font-size: 2.5rem;
-    padding: 0.75rem;
+  color: var(--text-light);
+  font-size: 2.5rem;
+  padding: 0.75rem;
 }
 
 .footer-flex a:hover {
-    color: white;
+  color: white;
 }

@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/10e8632cd5.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- used for bouncing chevron opacity on scroll -->
+  <script src='script.js'></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <li><a href="">Videos</a></li>
     <li><a href="">Live</a></li>
     <li><a href="">Releases</a></li>
-    <li class="hamburger remain"><a href="javascript:void(0);" onclick="menuClick();">
+    <li class="hamburger remain"><a href="#" onclick="menuClick();">
       <div class="icon-container">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -33,29 +33,11 @@
   </ul>
   </nav>
 
-  <script>
-  function menuClick() {
-    let selectNav = document.getElementById("myTopnav");
-    if (selectNav.className === "topnav") {
-      selectNav.className += " mobile cross";
-    } else {
-      selectNav.className = "topnav";
-    }
-  }
-</script>
-
 <!--END OF NAVIGATION BAR-->
 
 <div class="home-img">
-  <div class="arrow">
-  <p class="bounce">&#8964;</p></div>
-</div>
 
-<script>
-  $(window).scroll(function(){
-    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 100);
-  });
-</script>
+</div>
 
 <!-- FOOTER FROM HERE DOWN -->
 
@@ -68,7 +50,7 @@
   <a href="https://www.facebook.com/johncervantes/" target="_blank"><i class="fab fa-facebook"></i></a>
   <a href="https://soundcloud.com/johncervantes" target="_blank"><i class="fab fa-soundcloud"></i></a>
   <a href="mailto:john@johncervantes.co.uk" target="_blank"><i class="far fa-envelope"></i></a>
-</div> <!-- class="footer-flex" -->
+</div> <!-- "footer-flex" -->
 </footer>
-</div>
+</div> <!-- 'fill-height'-->
 </body>
