@@ -36,12 +36,24 @@ body {
 
 /* ===== TOPNAV ===== */
 
-.topnav {
-  position: fixed;
-  top: 0;
+.nav-container {
+  background-color: black;
   width: 100%;
   height: var(--topnav-height-desk);
-  z-index: 10;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.topnav {
+  /* position: fixed;
+  top: 0; */
+  width: 100%;
+  max-width: 1140px;
+  height: var(--topnav-height-desk);
+  /* z-index: 10; */
   overflow: hidden;
   display: flex;
   flex-direction: row;
