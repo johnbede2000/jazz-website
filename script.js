@@ -6,3 +6,4 @@ function menuClick() {
     myTopnav.className = 'topnav';
   }
 }
+// check this now I've split things between nav-container and topnav
