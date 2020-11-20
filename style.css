@@ -281,30 +281,36 @@ footer {
 }
 
 .pr {
-  padding-right: 0.75rem;
+  padding-right: 2rem;
 }
 
 .date {
-  flex: 1 1 15%;
+  flex: 1 1 22.5%;
 }
 
 .venue {
-  flex: 1 1 25%;
+  flex: 1 1 27.5%;
 }
 
 .date-title {
-  flex: 1 1 45%;
+  flex: 1 1 40%;
 }
 
 .tickets {
-  flex: 1 1 15%;
-  text-decoration: none;
-  color: black;
-  display: block;
+  flex: 1 1 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  text-align: center;
+  border-radius: 3px;
+  padding: 0.25em 0.5em;
 }
 
-.tickets:visited {
+.tickets a {
+  text-decoration: none;
+  color: black;
+}
+
+.tickets a:visited {
   color: black;
 }
