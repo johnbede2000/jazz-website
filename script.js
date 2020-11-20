@@ -1,9 +1,11 @@
 function menuClick() {
-  let myTopnav = document.getElementById('myTopnav');
-  if (myTopnav.className === 'topnav') {
-    myTopnav.className += ' mobile cross';
+  let mobMenu = document.getElementById('nav-list');
+  let height = document.getElementById('nav-height');
+  if (mobMenu.className === 'closed') {
+    mobMenu.className = 'open';
+    height.className = 'mobile';
   } else {
-    myTopnav.className = 'topnav';
+    mobMenu.className = 'closed';
+    height.className = 'desktop';
   }
 }
-// check this now I've split things between nav-container and topnav
