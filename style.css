@@ -16,6 +16,12 @@ html {
   width: 100%;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #121212;
+}
+
 image {
   display: block;
   max-width: 100%;
@@ -23,40 +29,70 @@ image {
 
 :root {
   --side-margins: 5%;
-  --topnav-height-desk: 6em;
-  --topnav-height-mob: 4em;
-  --background-gray: rgb(249, 249, 249);
-  --text-light: rgb(148, 148, 148);
-  --almost-black: rgb(54, 54, 54);
-  --space: 0.25rem;
-  --threshold: 550px;
+  --topnav-height: 4em;
+  --text-light: rgba(255, 255, 255, 0.7);
+  --raise-one: #222222;
+  --raise-two: #2e2e2e;
+  --menu-breakpoint: 35em; /* depends on number of menu items & words used */
+  /* --space: 0.25rem;
+  --threshold: 550px; */
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  background-color: black;
+@media screen and (min-width: 36em) {
+  :root {
+    --topnav-height: 6em;
+  }
 }
 
-/* ===== TOPNAV ===== */
-
-.nav-container {
-  background-color: black;
+.max-width-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: var(--topnav-height-desk);
+  height: 100%;
+}
+.max-width {
+  max-width: 75rem;
+  width: 100%;
+  height: 100%;
+  margin: 0 var(--side-margins);
+}
+
+.size-cover {
+  position: absolute; /*no positioned ancestors, so relative to the document body, and moves along with page scrolling (background only fills one screen, moves up when you scroll down)*/
+  top: var(--topnav-height);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fillscreen-image {
+  background-image: url('https://res.cloudinary.com/dd23iaiap/image/upload/v1594723219/john%20cervantes/2-L1000594_vxkpjx.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 30%;
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  background-color: var(--raise-one);
+  height: var(--topnav-height);
   position: fixed;
   top: 0;
+  width: 100%;
+}
+
+#nav-list {
+  /*refactor mobile first */
   display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
   z-index: 100;
   padding-left: var(--side-margins);
   padding-right: var(--side-margins);
-}
-
-.topnav {
   width: 100%;
-  max-width: 1140px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -65,14 +101,21 @@ body {
   list-style-type: none;
 }
 
-.topnav li {
+#nav-list li {
   display: block;
 }
 
-.topnav a {
+a {
   color: var(--text-light);
-  font-size: 2rem;
   text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+#nav-list a {
+  font-size: 2rem;
   font-family: 'Bebas Neue', sans-serif;
   background-image: linear-gradient(white, white);
   background-size: 0 5px;
@@ -81,61 +124,22 @@ body {
   transition: all 0.2s ease-out;
 }
 
-.topnav a:hover {
-  color: white;
+#nav-list a:hover {
   background-size: 100% 5px;
 }
 
-.hamburger a:hover,
-.current-page a:hover {
+#nav-list #hamburger a:hover,
+#nav-list a#current-page:hover {
   background-size: 0 5px;
 }
 
-.current-page a {
+#nav-list #current-page {
   color: white;
 }
 
-.topnav li.hamburger {
+#nav-list #hamburger {
   display: none;
   color: var(--text-light);
-}
-
-/* mobile menu CLOSED default */
-@media screen and (max-width: 35em) {
-  .nav-container {
-    height: var(
-      --topnav-height-mob
-    ); /* or just auto if sort paddings margins properly */
-  }
-  .topnav li {
-    display: none;
-  }
-  .remain {
-    display: block;
-  }
-}
-
-/* mobile menu OPEN */
-@media screen and (max-width: 35em) {
-  /*update if change number or names of pages */
-  .nav-container.mobile {
-    height: auto;
-  }
-
-  .topnav.mobile {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-bottom: 0.75rem; /*change to lobotomized owl */
-  }
-  .topnav.mobile li {
-    display: block;
-    padding-top: 0.75rem;
-  }
-  .mobile .hamburger {
-    position: absolute;
-    right: var(--side-margins);
-    /* color: var(--text-blue); */
-  }
 }
 
 .icon-container {
@@ -153,58 +157,56 @@ body {
   transition: 0.4s;
 }
 
-.cross .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-  background-color: white;
-}
-
-.cross .bar2 {
-  opacity: 0;
-}
-
-.cross .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
-  background-color: white;
-}
-
-/* ===== PAGES ===== */
-
-.size-cover {
-  position: absolute; /*no positioned ancestors, so relative to the document body, and moves along with page scrolling (background only fills one screen, moves up when you scroll down)*/
-  top: var(--topnav-height-desk);
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.hero-image {
-  background-image: url('https://res.cloudinary.com/dd23iaiap/image/upload/v1594723219/john%20cervantes/2-L1000594_vxkpjx.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right 30%;
-  height: 100%;
-  width: 100%;
-}
-
+/* mobile menu */
 @media screen and (max-width: 35em) {
-  .size-cover {
-    top: var(--topnav-height-mob);
+  /* default closed */
+  #nav-list.closed li {
+    display: none;
+  }
+  #nav-list.closed .remain,
+  #nav-list.closed #hamburger {
+    display: block;
+  }
+
+  /* open */
+  nav.mobile {
+    height: auto;
+  }
+  #nav-list.open {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 0.75rem; /*change to lobotomized owl */
+  }
+  #nav-list.open li {
+    display: block;
+    padding-top: 0.75rem;
+  }
+  #nav-list.open #hamburger {
+    display: block;
+    position: absolute;
+    right: var(--side-margins);
+  }
+
+  .open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: white;
+  }
+
+  .open .bar2 {
+    opacity: 0;
+  }
+
+  .open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: white;
   }
 }
 
-.embed-youtube {
-  max-width: 560px;
-  width: 100%;
-}
-
-/* ====== FOOTER ===== */
-
 footer {
-  background-color: black;
+  background-color: var(--raise-one);
   padding: 1rem;
-  color: white;
   font-size: 1.5rem;
   text-align: center;
   width: 100%;
@@ -213,104 +215,10 @@ footer {
 .footer-flex {
   display: flex;
   justify-content: center;
-  padding-left: var(--side-margins);
-  padding-right: var(--side-margins);
   flex-wrap: wrap;
 }
 
 .footer-flex a {
-  color: var(--text-light);
   font-size: 2.5rem;
   padding: 0.75rem;
-}
-
-.footer-flex a:hover {
-  color: white;
-}
-
-.live-date {
-  margin: 1rem auto;
-  border: 1px var(--text-light) solid;
-  padding: 1em;
-  border-radius: 5px;
-  width: 100%;
-}
-
-.page-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: calc(var(--topnav-height-desk) + 1.5rem) var(--side-margins) 0
-    var(--side-margins);
-}
-
-.max-width {
-  max-width: 1100px;
-  width: 100%;
-}
-
-.center {
-  margin: 0 auto;
-}
-
-.gray {
-  color: var(--text-light);
-}
-
-.stack {
-  --space: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.stack > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.stack > * + * {
-  margin-top: 1rem;
-}
-
-.switcher {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.pr {
-  padding-right: 2rem;
-}
-
-.date {
-  flex: 1 1 22.5%;
-}
-
-.venue {
-  flex: 1 1 27.5%;
-}
-
-.date-title {
-  flex: 1 1 40%;
-}
-
-.tickets {
-  flex: 1 1 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 3px;
-  padding: 0.25em 0.5em;
-}
-
-.tickets a {
-  text-decoration: none;
-  color: black;
-}
-
-.tickets a:visited {
-  color: black;
 }
