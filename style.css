@@ -264,3 +264,16 @@ main {
     width: 100%;
   }
 }
+
+:target {
+  animation: focus-attention 3s;
+}
+
+@keyframes focus-attention {
+  0% {
+    background-color: rgba(255, 255, 0, 0.3);
+  }
+  100% {
+    background-color: var(--raise-one);
+  }
+}
