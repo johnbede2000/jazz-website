@@ -222,7 +222,7 @@ footer {
   flex-shrink: 0;
   background-color: var(--raise-one);
   padding: 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
   width: 100%;
 }
@@ -249,6 +249,7 @@ main {
 
 .stack {
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .float-img {
@@ -276,4 +277,11 @@ main {
   100% {
     background-color: var(--raise-one);
   }
+}
+
+.live-box {
+  border: 1px var(--text-light) solid;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1em;
 }
