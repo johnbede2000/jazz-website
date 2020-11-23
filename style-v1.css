@@ -96,6 +96,7 @@ nav {
   width: 100%;
   flex-grow: 0;
   flex-shrink: 0;
+  z-index: 99;
 }
 
 #nav-list {
@@ -279,7 +280,6 @@ main {
   }
 }
 
-/* live */
 .live-box {
   border: 1px var(--text-light) solid;
   border-radius: 5px;
@@ -308,6 +308,7 @@ main {
   height: 100%;
   width: 100%;
   position: absolute;
+  z-index: 1;
 }
 
 .grid {
