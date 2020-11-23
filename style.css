@@ -287,15 +287,22 @@ main {
   padding: 1em;
 }
 
-/* videos */
-.responsive-vid {
+.responsive-container {
   overflow: hidden;
-  padding-bottom: 56.25%;
+
   position: relative;
   height: 0;
 }
 
-.responsive-vid iframe {
+.widescreen {
+  padding-bottom: 56.25%; /* aspect ratio 16:9 */
+}
+
+.square {
+  padding-bottom: 80%;
+}
+
+.responsive-container iframe {
   left: 0;
   top: 0;
   height: 100%;
