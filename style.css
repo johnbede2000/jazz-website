@@ -22,6 +22,7 @@ body {
   color: white;
   background-color: #121212;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -40,8 +41,7 @@ img {
   --raise-one: #222222;
   --raise-two: #2e2e2e;
   --menu-breakpoint: 35em; /* depends on number of menu items & words used */
-  /* --space: 0.25rem;
-  --threshold: 550px; */
+  --vertical-gap: 20px;
 }
 
 @media screen and (min-width: 36em) {
@@ -244,11 +244,11 @@ main {
 }
 
 .stack > * {
-  margin-top: 1.5rem;
+  margin-top: var(--vertical-gap);
 }
 
 .stack {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--vertical-gap);
   width: 100%;
 }
 
@@ -279,9 +279,36 @@ main {
   }
 }
 
+/* live */
 .live-box {
   border: 1px var(--text-light) solid;
   border-radius: 5px;
   width: 100%;
   padding: 1em;
+}
+
+/* videos */
+.responsive-vid {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.responsive-vid iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.grid {
+  display: grid;
+  margin-top: var(--vertical-gap);
+  margin-bottom: var(--vertical-gap);
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+  gap: var(--vertical-gap);
+  justify-content: space-between;
 }
