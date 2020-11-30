@@ -26,22 +26,20 @@
   </head>
 
   <body>
-    <nav id="nav-height" class="desktop">
+    <nav id="nav-height" class="default">
       <div class="max-width-container">
         <div class="max-width">
           <ul class="closed" id="nav-list">
-            <li>
-              <a href="index.html">Home</a>
+            <li class="remain">
+              <a id="current-page" href="#">Home</a>
             </li>
             <li><a href="about.html">About</a></li>
             <li>
               <a href="videos.html">Videos</a>
             </li>
             <li><a href="music.html">Music</a></li>
-            <li class="remain">
-              <a id="current-page" href="#">Live</a>
-            </li>
-            <li><a href="#connect">Contact</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="#connect" onclick="closeMenu();">Contact</a></li>
             <li id="hamburger">
               <a href="#" onclick="menuClick();">
                 <div class="icon-container">
@@ -91,6 +89,39 @@
                 href="https://www.thened.com/festive-season"
                 target="_blank"
                 >Tickets</a
+              >
+            </div>
+            <div class="live-box">
+              <div class="date">4, 7, 11, 21 Dec 2020</div>
+              <div class="venue">Park Chinois, London</div>
+              <p class="date-title">Stella & The OFHB</p>
+              <a
+                class="tickets"
+                href="https://parkchinois.com/2020/10/live-music-schedule-in-salon-de-chine/"
+                target="_blank"
+                >Info</a
+              >
+            </div>
+            <div class="live-box">
+              <div class="date">13, 20 Dec 2020</div>
+              <div class="venue">Park Chinois, London</div>
+              <p class="date-title">Trio Louis (lunchtime)</p>
+              <a
+                class="tickets"
+                href="https://parkchinois.com/2020/10/live-music-schedule-in-salon-de-chine/"
+                target="_blank"
+                >Info</a
+              >
+            </div>
+            <div class="live-box">
+              <div class="date">23rd Dec 2020</div>
+              <div class="venue">Park Chinois, London</div>
+              <p class="date-title">Jojo Desmond</p>
+              <a
+                class="tickets"
+                href="https://parkchinois.com/2020/10/live-music-schedule-in-salon-de-chine/"
+                target="_blank"
+                >Info</a
               >
             </div>
             <!--end boxes-->

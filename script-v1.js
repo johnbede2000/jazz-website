@@ -6,6 +6,11 @@ function menuClick() {
     height.className = 'mobile';
   } else {
     mobMenu.className = 'closed';
-    height.className = 'desktop';
+    height.className = 'default';
   }
+}
+
+function closeMenu() {
+  document.getElementById('nav-list').className = 'closed';
+  document.getElementById('nav-height').className = 'default';
 }

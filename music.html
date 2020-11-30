@@ -22,20 +22,20 @@
     <script src="script-v1.js"></script>
   </head>
   <body>
-    <nav id="nav-height" class="desktop">
+    <nav id="nav-height" class="default">
       <div class="max-width-container">
         <div class="max-width">
           <ul class="closed" id="nav-list">
-            <li>
-              <a href="index.html">Home</a>
+            <li class="remain">
+              <a id="current-page" href="#">Home</a>
             </li>
             <li><a href="about.html">About</a></li>
             <li>
               <a href="videos.html">Videos</a>
             </li>
-            <li class="remain"><a id="current-page" href="#">Music</a></li>
+            <li><a href="music.html">Music</a></li>
             <li><a href="live.html">Live</a></li>
-            <li><a href="#connect">Contact</a></li>
+            <li><a href="#connect" onclick="closeMenu();">Contact</a></li>
             <li id="hamburger">
               <a href="#" onclick="menuClick();">
                 <div class="icon-container">
