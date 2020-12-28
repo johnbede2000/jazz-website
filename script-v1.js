@@ -14,3 +14,7 @@ function closeMenu() {
   document.getElementById('nav-list').className = 'closed';
   document.getElementById('nav-height').className = 'default';
 }
+
+function goBack() {
+  window.history.back();
+}
