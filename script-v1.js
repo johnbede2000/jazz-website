@@ -18,3 +18,7 @@ function closeMenu() {
 function goBack() {
   window.history.back();
 }
+
+function storeSession() {
+  sessionStorage.setItem('submitted', 'yes');
+}

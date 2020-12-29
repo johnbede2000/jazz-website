@@ -387,3 +387,7 @@ main {
 #success-msg .fas {
   font-size: 4rem;
 }
+
+.removed {
+  display: none !important;
+}

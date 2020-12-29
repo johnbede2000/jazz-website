@@ -83,6 +83,11 @@
             <input class="input" type="email" id="email" name="user_email" />
             <button class="btn" type="submit">MAILING LIST</button>
           </form>
+          <script>
+            if (sessionStorage.submitted == 'yes') {
+              document.querySelector('#mailing').classList.add('removed');
+            }
+          </script>
           <div class="external-links">
             <a href="https://www.instagram.com/johncerv/" target="_blank"
               ><i class="fab fa-instagram"></i
